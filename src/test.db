@@ -1,0 +1,2 @@
+db.world.findOne({population:{$gt: 70000000}},
+               {name: 1,capital:1,_id: 0

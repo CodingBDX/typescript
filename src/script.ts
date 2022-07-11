@@ -4,6 +4,12 @@ type Id = string | number
 type Identity<argType> = (arg: argType) => argType
 type P = keyof User
 
+function multiply(a:number, b:number){
+  a * b
+}
+
+multiply(6, 1)
+
 function consoleSize<type extends {length: number}>(arg: type): type {
   console.log(arg.length)
   return arg
@@ -60,7 +66,7 @@ console.log(aInstance.c)
 
 const abb = consoleSize([3,2])
 
-const compteur = document.getElementById("compteur") as HTMLButtonElement;
+
 const input = document.querySelector('input') as HTMLInputElement
 // const b: boolean = true;
 // const array: string[] = [];
@@ -95,18 +101,18 @@ function getX(p: Point) {
   return p.x
 }
 getX(new Geometry())
-const increment = (e: Event) => {
-  e.preventDefault();
-  i++;
-  const span = compteur.querySelector('span')
-  if (span) {
-    span.innerText = i.toString();
-  }
-}
+// const increment = (e: Event) => {
+//   e.preventDefault();
+//   i++;
+//   const span = compteur.querySelector('span')
+//   if (span) {
+//     span.innerText = i.toString();
+//   }
+// }
 
-compteur?.addEventListener('click', increment)
+// compteur?.addEventListener('click', increment)
 
-console.log(date)
+// console.log(date)
 
 
 abstract class GeometryNext {
@@ -123,6 +129,17 @@ class Triangle extends GeometryNext {
   }
 }
 
+
+enum time {
+  introduction = 'intro',
+  look = 'look', 
+  basket ='basket',
+  paiment ='paiement'
+}
+
+const step = time.look
+
+console.log(step);
 // abstract class Geologism  {
 //   static #origin = {x:number,y:number}
 //   static {
@@ -132,7 +149,27 @@ class Triangle extends GeometryNext {
 
 // Geologism.origin
 
+function example(a: string | Date) {
+  if (a instanceof Date) {
+    a 
+  }else{a}
+}
 
+
+function example2(a: string | string[]) {
+  if (Array.isArray(a)) {
+    a[2] 
+  }else{a}
+}
+
+function example3(a: MouseEvent | HTMLInputElement) {
+  if ("value" in a) {
+    a
+  }
+}
+function isMyDate(a: any):a is Date{
+  return a instanceof Date
+}
 interface Point {
   x: number
   y:number

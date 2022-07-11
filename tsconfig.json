@@ -3,9 +3,11 @@
     "outDir": "dist",
     "target": "ES6",
     "noEmitOnError": true,
-    "strict": true
+    "strict": true,
+    "moduleResolution": "node"
   },
   "files": [
-    "src/script.ts"
+    "src/script.ts",
+    "src/loto.ts"
   ]
 }
